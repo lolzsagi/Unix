@@ -1,0 +1,27 @@
+Create a search engine to find a word in all the files and directories in the data base.
+	read -p "Enter the word that you want to search in the database" pattern
+	read pattern
+	echo " $pattern found"
+	read -p "Press 1 for knowing the info of the files where '$pattern' is present" key
+	if [ $key -eq 1 ]
+	then
+	grep -r $pattern
+	fi
+
+**************************************************************************************************************************************************************************
+1.Display employee details whose designation is Manager
+    sed -n '/manager/p' lab10emp.csv
+
+*********************  
+2.Display whose name is in 1/2
+    sed -n '1,2p' lab10emp.csv
+
+********************* 
+3.Display salary which starting with 2
+  sed -n '/2..../p' lab10emp.csv 
+
+*********************
+4.From line 1 to 5 if manager replace with director
+  sed -n '1,5p' lab10emp.csv | sed 's/manager/director/g'
+
+**************************************************************************************************************************************************************************

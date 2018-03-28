@@ -1,0 +1,33 @@
+1.Write a shell scipt to find whether a entered number is prime number or not?
+	read -p "Enter a number: " n
+	i=2
+	while [ $i -lt $n ]
+	do
+	if [ `expr $n % $i` -eq 0 ]
+	then
+	echo "$n is not a prime number"
+	echo "Since it is divisible by $i"
+	exit
+	fi
+	i=`expr $i + 1`
+	done
+	echo "$n is a prime number "
+
+*************************************************************************************************************************************************************************
+2.Write a shell scipt to find whether a entered number is positive or negative? 	
+	read -p "Enter a Number:" n
+	if [ $n -gt 0 ]
+	then
+	echo "Number is Positive"
+	else
+	if [ $n -eq 0 ]
+	then
+	echo "Number is Zero"  
+	else
+	echo "Number is Negative"
+	fi
+
+*************************************************************************************************************************************************************************
+
+
+

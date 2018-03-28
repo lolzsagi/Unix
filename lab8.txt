@@ -1,0 +1,121 @@
+SED COMMANDS
+
+sed -n '1,2p' filename
+To print lines from 1 to 2
+
+sed -n '$p' filename
+To print last line
+
+sed -n -e '1,3p' -e '5,8p' filename
+To print selective lines
+
+sed -n '/Student/p' filename
+To print all the lines which contain the word Student
+
+sed 's/k/m/g' filename
+Replaces letter k with m in that file
+
+sed '1i\ (enter)
+>line 1\(backward slash is to write in next line)
+>line2
+>' filename(input these lines in the file)
+**************************************************************************************************************************************************************************
+1.Write a shell script to prefix all the filenames with the date (dd/mm/yy) format
+
+file="/home/SSR/Unix/random"
+cdate=$(date +%d-%m-%Y)
+for file in *
+do      
+        mv "$file" "$cdate"_"$file"
+done 
+
+OUTPUT	
+01-03-2018_test1
+01-03-2018_test2
+01-03-2018_test3
+
+**************************************************************************************************************************************************************************
+2.Use grep with all possible options
+
+$ cat > test
+With "-i" option
+$ grep -i "unix" test
+
+With "-c" option
+$ grep -c "unix" test
+
+With "-l" option
+$ grep -l "unix" test
+
+With "-v" option
+$ grep -v "unix" test
+
+With "-n" option
+grep -n "unix" test
+
+With "-e" option
+$ grep -e "unix" -e "Lunix" test
+
+With "-x" option
+$ grep -x "unix" test
+
+**************************************************************************************************************************************************************************
+3.Setting permission to the files
+chmod 755 filename.ext
+(concept taught in theory class)
+
+**************************************************************************************************************************************************************************
+4.FILE RELATED COMMANDS
+
+=> cp command
+Create two files s1 and s2 
+$ cat > s1
+abc
+$ cat > s2
+efg
+$ cp s2 s1
+
+*********************
+=> mv command
+Moves the contents of source file to destination file
+$ cat > n1
+hi
+$ cat > n2
+hello
+$ mv n2 n1
+$ cat n1
+
+Output
+hello hi
+
+*********************
+=> cmp command
+Used for comparing data in between files
+$ cat > a1                                           
+This is test1 file1
+$ cat > a2
+This is test2 file2
+$ cmp s1 s2
+
+Output
+a1 a2 differ: byte 2,line 1
+
+*********************
+=> rm command
+Used to delete a file
+$ rm s1
+
+**************************************************************************************************************************************************************************
+5.Use of find an xargs command
+Used to find files
+$ find *lst -print
+
+*********************
+Xargs command is used for building and executing cmd lines from stdin.
+$ echo ama aba apa ala ara asa|xargs -n 3
+
+Output
+ama aba apa
+ala ara asa
+**************************************************************************************************************************************************************************
+

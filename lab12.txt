@@ -1,0 +1,40 @@
+SELECT COMMANDS
+
+PROGRAM
+-------
+
+names='Ram Raj Kumar Mahesh'
+PS3='Select name: '
+select name in $names
+do
+    if [ $name == Mahesh ]
+      then
+        break
+    fi
+    echo "hello $name"
+done
+
+Output:
+1) Ram
+2) Raj
+3) Kumar
+4) Mahesh
+Select name: 1
+hello Ram
+Select name: 2
+hello Raj
+Select name: 3
+hello Kumar
+Select name: 4
+
+**************************************************************************************************************************************************************************
+DIALOG COMMANDS
+				
+
+	dialog --title "Hi" --msgbox "Hello" 10 20
+	dialog --title "Hi" --yesno "Free time?" 10 20
+	dialog --title "Hi" --infobox "Free time?" 10 20;sleep 6
+	dialog --title "Hi" --checklist "tick the list" 10 20 3 1 yellow on, 2 green off, 3 blue on
+	dialog --title "Hi" --menu "Enter the option" 10 20 3 1 yellow, 2 green, 3 blue
+	
+

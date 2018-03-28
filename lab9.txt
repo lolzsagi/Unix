@@ -1,0 +1,19 @@
+SED COMMANDS
+
+1.$ sed -n '1,2p' data.lst
+2.$ sed -n '$p' data.lst
+3.$ sed -n -e '1,3p' -e '5,6p' -e '9,10p' data.lst
+4.$ sed -n '/Manager/p' data.lst
+5.$ sed -n '1,2!p' data.lst
+6.$ sed 's/|/:/g' data.lst
+Excersice 5
+
+1.Display the details of the employee whose designation is manager/Manager.
+	sed -n '/[mM]anager/p' data.lst
+
+2. Display the details of first and second employee
+	sed -n '1,2p' data.lst
+
+3. From lines 1 to 5 if manager then replace with directory
+	sed '1,5 s/Manager/Director/g' data.txt
+

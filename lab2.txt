@@ -1,0 +1,454 @@
+"BC"
+bc: bc - An arbitrary precision calculator language
+		
+		sub commands:
+		 -h, --help
+			      Print the usage and exit.
+
+		       -i, --interactive
+			      Force interactive mode.
+
+		       -l, --mathlib
+			      Define the standard math library.
+
+		       -w, --warn
+			      Give warnings for extensions to POSIX bc.
+
+		       -s, --standard
+			      Process exactly the POSIX bc language.
+
+		       -q, --quiet
+			      Do not print the normal GNU bc welcome.
+
+		       -v, --version
+			      Print the version number and copyright and quit.
+
+
+
+		cs2016a206@user:~/SSR$ bc
+		bc 1.06.95
+		Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+		This is free software with ABSOLUTELY NO WARRANTY.
+		For details type `warranty'. 
+		9+1
+		10
+
+ls -l
+	Long list of directories along with the permissions,size allocated,link,users and the last modified time and date
+O/P:
+drwxr-xr-x 2 cs2016a206 cs216a206 4096 Jan 16 14:42 Desktop
+over here
+d:directories 
+r:read permission
+w:write permission
+x:execute permission
+rwx : read-write-execute (owner)
+r-x: read and execute only! (group)
+r-x : read and execute only(others)
+2 : number of links for the directories
+cs2016a206: the owner
+cs2016a206: the group
+4096 : allocated size
+Jan 16 09:56 : last modified date and time
+desktop: the directory name
+
+
+"WHO"
+shows who is logged in
+		  sub commands :
+		-a : -all :same as other commands
+		 ex: $who -a
+		system boot 2018-01-31 08:37
+		run-level 5 2018-01-31 08:37
+		cs2016a206 + tty2  2018-01-31 08:37 00:48   1394(/dev/tty2)
+
+
+		-b : -boot : time of last system boot
+		ex: system boot 2018-01-31 08:37
+
+
+		 -d, --dead
+			      print dead processes
+
+		       -H, --heading
+			      print line of column headings
+
+		       --ips  print  ips  instead  of  hostnames. with --lookup, canonicalizes
+			      based on stored IP, if available, rather than stored hostname
+
+		       -l, --login
+			      print system login processes
+
+		       --lookup
+			      attempt to canonicalize hostnames via DNS
+
+		       -m     only hostname and user associated with stdin
+
+		       -p, --process
+			      print active processes spawned by init
+
+		 -q, --count
+			      all login names and number of users logged on
+
+		       -r, --runlevel
+			      print current runlevel
+
+		       -s, --short
+			      print only name, line, and time (default)
+
+		       -t, --time
+			      print last system clock change
+
+		       -T, -w, --mesg
+			      add user's message status as +, - or ?
+
+		       -u, --users
+			      list users logged in
+
+		       --message
+			      same as -T
+
+		 -t, --time
+			      print last system clock change
+
+		       -T, -w, --mesg
+			      add user's message status as +, - or ?
+
+		       -u, --users
+			      list users logged in
+
+		       --message
+			      same as -T
+
+		       --writable
+			      same as -T
+
+		       --help display this help and exit
+
+		       --version
+			      output version information and exit
+
+
+		cs2016a206@user:~$ who -T
+		cs2016a206 + tty2         2018-01-31 08:37 (/dev/tty2)
+		cs2016a206@user:~$ who -u
+		cs2016a206 tty2         2018-01-31 08:37 01:26        1394 (/dev/tty2)
+		cs2016a206@user:~$ who -s
+		cs2016a206 tty2         2018-01-31 08:37 (/dev/tty2)
+		cs2016a206@user:~$ who -q
+		cs2016a206
+		# users=1
+		cs2016a206@user:~$ who -l
+		cs2016a206@user:~$ who -H
+		NAME     LINE         TIME             COMMENT
+		cs2016a206 tty2         2018-01-31 08:37 (/dev/tty2)
+
+
+"LS"
+lists all the directory contents
+		sub commands
+		  -a, --all
+			      do not ignore entries starting with .
+
+		       -A, --almost-all
+			      do not list implied . and ..
+
+		       --author
+			      with -l, print the author of each file
+
+		       -b, --escape
+			      print C-style escapes for nongraphic characters
+
+		       --block-size=SIZE
+			      scale sizes by SIZE before printing them; e.g., '--block-size=M'
+			      prints sizes in units of 1,048,576 bytes; see SIZE format below
+
+		       -B, --ignore-backups
+			      do not list implied entries ending with ~
+
+		       -c     with -lt: sort by, and show, ctime (time of last modification of
+			      file status information); with -l: show ctime and sort by  name;
+			      otherwise: sort by ctime, newest first
+
+		  -d, --directory
+			      list directories themselves, not their contents
+
+		cs2016a206@user:~$ ls -l
+		total 51
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Desktop
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Documents
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Downloads
+		-rw-r--r-- 1 cs2016a206 cs2016a206 8980 Jan  2 11:37 examples.desktop
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Music
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Pictures
+		drwxr-xr-x 5 cs2016a206 cs2016a206 4096 Jan 31 09:55 SSR
+		drwxr-xr-x 3 cs2016a206 cs2016a206 4096 Jan 16 14:42 Public
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Templates
+		drwxr-xr-x 2 cs2016a206 cs2016a206 4096 Jan 16 14:42 Videos
+		cs2016a206@user:~$ ls -a
+		.              .cache     examples.desktop  .idlerc   .pki      Templates
+		..             .config    .gconf            .local    SSR   Videos
+		.bash_history  Desktop    .gnome            .mozilla  .profile  .viminfo
+		.bash_logout   Documents  .gnupg            Music     Public
+		.bashrc        Downloads  .ICEauthority     Pictures  .ssh
+		cs2016a206@user:~$ ls -b
+		Desktop    Downloads         Music     SSR  Templates
+		Documents  examples.desktop  Pictures  Public   Videos
+		cs2016a206@user:~$ ls -d
+		.
+		cs2016a206@user:~$ ls -B
+		Desktop    Downloads         Music     SSR  Templates
+		Documents  examples.desktop  Pictures  Public   Videos
+		cs2016a206@user:~$ ls -c
+		SSR  Documents  Music     Public     Videos
+		Desktop  Downloads  Pictures  Templates  examples.desktop
+
+"CAL"
+cal, ncal — displays a calendar and the date of Easter
+		sub commands :
+		cal [-31jy] [-A number] [-B number] [-d yyyy-mm] [[month] year]
+		     cal [-31j] [-A number] [-B number] [-d yyyy-mm] -m month [year]
+		     ncal [-C] [-31jy] [-A number] [-B number] [-d yyyy-mm] [[month] year]
+		     ncal [-C] [-31j] [-A number] [-B number] [-d yyyy-mm] -m month [year]
+		     ncal [-31bhjJpwySM] [-A number] [-B number] [-H yyyy-mm-dd] [-d yyyy-mm]
+			 [-s country_code] [[month] year]
+		     ncal [-31bhJeoSM] [-A number] [-B number] [-d yyyy-mm] [year]
+
+
+
+		     -h      Turns off highlighting of today.
+
+		     -J      Display Julian Calendar, if combined with the -o option, display
+			     date of Orthodox Easter according to the Julian Calendar.
+
+		     -e      Display date of Easter (for western churches).
+
+		     -j      Display Julian days (days one-based, numbered from January 1).
+
+		     -m month
+			     Display the specified month.  If month is specified as a decimal
+			     number, appending ‘f’ or ‘p’ displays the same month of the fol‐
+			     lowing or previous year respectively.
+
+		     -o      Display date of Orthodox Easter (Greek and Russian Orthodox
+			     Churches).
+
+		     -p      Print the country codes and switching days from Julian to Grego‐
+			     rian Calendar as they are assumed by ncal.  The country code as
+			     determined from the local environment is marked with an asterisk.
+
+
+		 -s country_code
+			     Assume the switch from Julian to Gregorian Calendar at the date
+			     associated with the country_code.  If not specified, ncal tries
+			     to guess the switch date from the local environment or falls back
+			     to September 2, 1752.  This was when Great Britain and her
+			     colonies switched to the Gregorian Calendar.
+
+		     -w      Print the number of the week below each week column.
+
+		     -y      Display a calendar for the specified year. This option is implied
+			     when a year but no month are specified on the command line.
+
+		     -3      Display the previous, current and next month surrounding today.
+
+		     -1      Display only the current month. This is the default.
+
+ 
+cs2016a206@user:~$ cal -31j
+		       January 2018          
+		 Su  Mo  Tu  We  Th  Fr  Sa  
+		      1   2   3   4   5   6  
+		  7   8   9  10  11  12  13  
+		 14  15  16  17  18  19  20  
+		 21  22  23  24  25  26  27  
+		 28  29  30  31          
+
+
+
+cs2016a206@user:~$ cal -31jy
+
+		 2018
+			  January                     February            
+		 Su  Mo  Tu  We  Th  Fr  Sa   Su  Mo  Tu  We  Th  Fr  Sa  
+		      1   2   3   4   5   6                   32  33  34  
+		  7   8   9  10  11  12  13   35  36  37  38  39  40  41  
+		 14  15  16  17  18  19  20   42  43  44  45  46  47  48  
+		 21  22  23  24  25  26  27   49  50  51  52  53  54  55  
+		 28  29  30  31               56  57  58  59              
+				                                          
+
+			   March                        April             
+		 Su  Mo  Tu  We  Th  Fr  Sa   Su  Mo  Tu  We  Th  Fr  Sa  
+				 60  61  62   91  92  93  94  95  96  97  
+		 63  64  65  66  67  68  69   98  99 100 101 102 103 104  
+		 70  71  72  73  74  75  76  105 106 107 108 109 110 111  
+		 77  78  79  80  81  82  83  112 113 114 115 116 117 118  
+		 84  85  86  87  88  89  90  119 120                      
+				                                          
+
+			    May                         June              
+		 Su  Mo  Tu  We  Th  Fr  Sa   Su  Mo  Tu  We  Th  Fr  Sa  
+			121 122 123 124 125                      152 153  
+		126 127 128 129 130 131 132  154 155 156 157 158 159 160  
+		133 134 135 136 137 138 139  161 162 163 164 165 166 167  
+		140 141 142 143 144 145 146  168 169 170 171 172 173 174  
+		147 148 149 150 151          175 176 177 178 179 180 181  
+				                                          
+
+			   July                        August             
+		 Su  Mo  Tu  We  Th  Fr  Sa   Su  Mo  Tu  We  Th  Fr  Sa  
+		182 183 184 185 186 187 188              213 214 215 216  
+		189 190 191 192 193 194 195  217 218 219 220 221 222 223  
+		196 197 198 199 200 201 202  224 225 226 227 228 229 230  
+		203 204 205 206 207 208 209  231 232 233 234 235 236 237  
+		210 211 212                  238 239 240 241 242 243      
+				                                          
+
+			 September                     October            
+		 Su  Mo  Tu  We  Th  Fr  Sa   Su  Mo  Tu  We  Th  Fr  Sa  
+				        244      274 275 276 277 278 279  
+		245 246 247 248 249 250 251  280 281 282 283 284 285 286  
+		252 253 254 255 256 257 258  287 288 289 290 291 292 293  
+		259 260 261 262 263 264 265  294 295 296 297 298 299 300  
+		266 267 268 269 270 271 272  301 302 303 304              
+		273                                                       
+
+			 November                     December            
+		 Su  Mo  Tu  We  Th  Fr  Sa   Su  Mo  Tu  We  Th  Fr  Sa  
+				305 306 307                          335  
+		308 309 310 311 312 313 314  336 337 338 339 340 341 342  
+		315 316 317 318 319 320 321  343 344 345 346 347 348 349  
+		322 323 324 325 326 327 328  350 351 352 353 354 355 356  
+		329 330 331 332 333 334      357 358 359 360 361 362 363  
+				             364 365                      
+		 
+
+
+
+
+"DATE"
+ date=> prints or sets system date and time
+
+
+		
+		 -d, --date=STRING
+			      display time described by STRING, not 'now'
+
+		       --debug
+			      annotate the parsed date, and warn about questionable  usage  to
+			      stderr
+
+		       -f, --file=DATEFILE
+			      like --date; once for each line of DATEFILE
+
+		       -I[FMT], --iso-8601[=FMT]
+			      output  date/time  in ISO 8601 format.  FMT='date' for date only
+			      (the default), 'hours', 'minutes', 'seconds', or 'ns'  for  date
+			      and    time    to    the    indicated    precision.     Example:
+			      2006-08-14T02:34:56-06:00
+
+		       -R, --rfc-2822
+			      output date and time in RFC 2822 format.  Example: Mon,  14  Aug
+			      2006 02:34:56 -0600
+
+		       --rfc-3339=FMT
+			      output  date/time in RFC 3339 format.  FMT='date', 'seconds', or
+			      'ns' for date and time to  the  indicated  precision.   
+		-r, --reference=FILE
+			      display the last modification time of FILE
+
+		       -s, --set=STRING
+			      set time described by STRING
+
+		       -u, --utc, --universal
+			      print or set Coordinated Universal Time (UTC)
+
+		       --help display this help and exit
+
+		       --version
+			      output version information and exit
+
+		cs2016a206@user:~$ date
+		Wed Jan 31 09:23:47 IST 2018
+		cs2016a206@user:~$ date -R
+		Wed, 31 Jan 2018 09:21:51 +0530
+
+
+"TIME"
+		cs2016a206@user:~$ time
+
+		real	0m0.000s
+		user	0m0.000s
+
+		 -o FILE, --output=FILE
+			      Write the resource use statistics to FILE instead of to the
+			      standard error stream.  By default, this overwrites the file,
+			      destroying the file's previous contents.  This option is useful
+			      for collecting information on interactive programs and programs
+			      that produce output on the standard error stream.
+
+		       -a, --append
+			      Append the resource use information to the output file instead
+			      of overwriting it.  This option is only useful with the `-o' or
+			      `--output' option.
+
+		       -f FORMAT, --format FORMAT
+			      Use FORMAT as the format string that controls the output of
+			      time.  See the below more information.
+
+		       --help Print a summary of the command line options and exit.
+
+		       -p, --portability
+			      Use the following format string, for conformance with POSIX
+			      standard 1003.2:
+		-a, --append
+			      Append the resource use information to the output file instead
+			      of overwriting it.  This option is only useful with the `-o' or
+			      `--output' option.
+
+		       -f FORMAT, --format FORMAT
+			      Use FORMAT as the format string that controls the output of
+			      time.  See the below more information.
+
+		       --help Print a summary of the command line options and exit.
+
+		       -p, --portability
+			      Use the following format string, for conformance with POSIX
+			      standard 1003.2:
+				        real %e
+				        user %U
+				        sys %S
+
+		       -v, --verbose
+			      Use the built-in verbose format, which displays each available
+			      piece of information on the program's resource use on its own
+			      line, with an English description of its meaning.
+
+"UNAME"
+		cs2016a206@user:~$ uname
+		Linux
+		 -a, --all
+			      print  all  information,  in the following order, except omit -p
+			      and -i if unknown:
+
+		       -s, --kernel-name
+			      print the kernel name
+
+		       -n, --nodename
+			      print the network node hostname
+
+		       -r, --kernel-release
+			      print the kernel release
+
+		       -v, --kernel-version
+			      print the kernel version
+
+		       -m, --machine
+			      print the machine hardware name
+
+		       -p, --processor
+			      print the processor type (non-portable)
+
+
+

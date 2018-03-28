@@ -1,0 +1,58 @@
+Installing VIM editor in Ubuntu:
+-Open the terminal
+-type in "sudo apt install vim"
+-type in the password of the adminstrator and press "y" when it prompts to install
+-make sure you have the internet connection
+
+Creating A Directory
+1. "ls" command displays all the documents i.e., both files and directories in the system.
+2. vim<filename.ext> => creates a text file
+3. "gedit <filename.ext>" takes us into the text editor
+4. To create a directory we use the command => mkdir<name>
+5. "cd <dirname>" gets you into the directory dirname
+
+Unix Commands:
+There are two different modes:
+Insert Mode:It is just like normal text editor
+		(Press i for insert mode)
+Command Mode:Use commands to get things done like editing deleting,etc...
+		(Press  for command mode)
+		1=> :wq-to save and exit
+		2=> u-to undo the last command and U to undi the whole time
+		3=> v-starts visual mode for selecting the lines
+		4=> 0-to move to the start of the line
+		5=> x-to delete the unwanted character
+		6=> :q!-to trash all changes
+		7=> A-to append text at the end
+		8=> 2w-to move the cursor two words forward
+		9=> 3e-to move the cursor at the end of the third word forward
+		10=> dw-move the cursor to the begining of the word to delete the word
+		11=> d2w-which deletes two words
+		12=> :| to run the shell commanands like :|dir,:||s
+		13=> p-puts the previously deleted text after the cursor
+		14=> r-to replace the character
+		15=> ce-to delete the word and places you in the insert mode
+		16=> gg-to move you to the start of the file
+		17=> %-to find matching
+		18=> G-to move to the bottom of the line
+		19=> :s/old/new/g-to substitute 'new' for 'old' for g is global	
+		20=> dd-to delete the line
+		21=> :w-test and save the file
+		22=> CTRL-R to redo
+		23=> :r-filename will insert into the current file
+		24=> R-to replace more than one character
+		25=> y-operator to copy text using v
+		26=> ctrl-w to jump from one window to another
+		27=> o-opens the line below the cursor and start insert mode
+		28=> O-opens the line above the cursor
+		28=> a-insert text after the cursor
+		30=> A-insert text after the end of the line
+		31=> e-command moves to the end of thne word
+		32=> Y-operator yanks text
+		33=> R-enters replace mode until <> is pressed
+		34=> yw-yanks one word
+
+
+
+
+

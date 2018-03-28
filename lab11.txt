@@ -1,0 +1,25 @@
+AWK COMMANDS
+
+here lab11.ext is the filename.ext
+1.Delete blank space using awk
+	awk -F "|" '!(/ /.' lab11.lst
+		(OR.
+	awk 'NF' filename.ext
+
+2.Print only the odd lines of a file
+   awk NR%2==1 lab11.lst
+   
+3.Print last line using awk
+  awk -F "|" 'END{print}' lab11.lst 
+  
+Write Equavilant Command For These Commands
+4.head -n 5 filename
+	awk -F 'NR==1, NR==5{print}' lab11.lst
+  
+5.sed -n '5,10p' filename
+	awk -F "|" 'NR==5,NR==10 {print}' lab11.lst
+  
+6. write the equivalent awk command for "tail +7 filename"  
+	awk -F "|" 'NR==7,NR==$NF{print $0}' lab11.lst
+
+**************************************************************************************************************************************************************************
